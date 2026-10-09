@@ -41,7 +41,7 @@ body {
     line-height: 1.6;
     background-color: var(--color-background);
     color: var(--color-text-dark);
-    padding: var(--spacing-xl);
+    /* padding: var(--spacing-xl); */
 }
 
 h1 {
@@ -276,7 +276,6 @@ h3 {
         display: flex;
     }
 }
-
 .menu-toggle:focus-visible + .hamburger {
     outline: 2px solid var(--color-highlight);
     outline-offset: 4px;
@@ -285,35 +284,30 @@ h3 {
     outline: 2px solid var(--color-highlight);
     outline-offset: 4px;
 }
-
 /* Mobile menu */
 .menu-toggle {
     position: absolute;
     width: 1px;
     height: 1px;
-    opacity: 0;
+    opacity: 0; 
 }
 /* MOBILE LAYOUT */
 @media (max-width: 860px) {
-    body {
-        padding: var(--spacing-md);
-    }
-
+    /* body {
+        /* padding: var(--spacing-md); 
+    }*/
     .site-header {
         margin: calc(-1 * var(--spacing-md))
                 calc(-1 * var(--spacing-md))
                 var(--spacing-lg);
     }
-
     .navbar {
         flex-wrap: wrap;
     }
-
     .hamburger {
         display: block;
         margin-left: auto;
     }
-
     .links {
         display: none;
         flex-direction: column;
@@ -321,22 +315,18 @@ h3 {
         width: 100%;
         gap: var(--spacing-xs);
     }
-
     .menu-toggle:checked ~ .links {
         display: flex;
     }
-
     .links > li {
         width: 100%;
     }
-
     .links > li > a,
     .dropdown-label {
         display: block;
         width: 100%;
         padding: var(--spacing-sm) 0;
     }
-
     .dropdown-menu {
         position: static;
         min-width: 0;
@@ -349,6 +339,12 @@ h3 {
 }
 
 
+
+
+footer{
+    padding: var(--spacing-xl);
+    background-color: var(--color-highlight);
+}
 footer a {
     margin-left: 0;
     text-decoration: none;
@@ -357,44 +353,51 @@ footer a {
     padding: var(--spacing-sm) 0;
     display: inline-block;
 }
-
 footer a:hover {
     color: var(--color-accent);
     text-decoration: underline;
     text-decoration-color: var(--color-highlight);
 }
 
+
+
 .homepage {
     height: 100vh;
     width: 100%;
     position: relative;
-    background: url("images.jpg");
+    background-image: url("home.jpg");
     background-position: center 65%;
     background-size: cover;
     background-attachment: fixed;
 }
-
+.homepage::before { 
+    content: ""; 
+    position: absolute; 
+    inset: 0;
+    background: rgba(0, 0, 0, 0.50); 
+}
 .homepage .content {
     display: flex;
     height: 85%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 1;
 }
-
 .homepage .content h1 {
     font-size: 80px;
     font:'.silkscreen-regular';
     margin-bottom: var(--spacing-sm);
 }
-
 .homepage .content .text {
     margin-bottom: var(--spacing-lg);
     color: #fff;
     font-size: 20px;
     text-align: center;
-    text-shadow: 0px 0px var(--spacing-xs) rgba(0, 0, 0, 0.3);
+    text-shadow: 0px 0px var(--spacing-xs) rgba(0, 0, 0, 0.4);
 }
+
+
 
 .content a {
     color: white;
@@ -410,7 +413,6 @@ footer a:hover {
     box-shadow: 0 var(--spacing-sm) var(--spacing-sm) rgba(0, 0, 0, 0.4);
     text-decoration: none;
 }
-
 .content a:hover {
     background-color: color-mix(in srgb, var(--color-accent) 80%, black);
     border-color: var(--color-secondary);
@@ -424,7 +426,84 @@ section {
     padding: var(--spacing-lg) 0 0;
 }
 
-
+/* About us*/
+.about-banner {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+    border-radius: var(--radius-sm);
+}
+.about-banner p {
+    font-family: var(--font-primary);
+    font-size: clamp(0.75rem, 2vw, 1.25rem);
+    line-height: 1.6;
+}
+.who-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--spacing-md); 
+    width: 100%;
+    max-width: 1200px; 
+    margin: var(--spacing-md) auto; 
+    align-items: stretch;
+    
+} 
+.who-card { 
+    min-height: 250px;
+    min-width: 0;
+    background-color: var(--color-neutral); 
+    color: var(--color-text-light); 
+    padding: var(--spacing-xl); 
+    border-radius: var(--radius-md); 
+} 
+.who-grid p { 
+    font-family: var(--font-secondary); 
+    line-height: 1.6; 
+}
+.who-grid a {
+    color: var(--color-highlight);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.who-grid a:hover{
+    color: white;
+}
+.where-card {
+    width: 50%;
+    background-color: var(--color-neutral);
+    color: var(--color-text-light);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-xl);
+}
+.card-image {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--spacing-md);
+}
+/*stacked for smaller screens */
+@media (max-width: 600px) { 
+    .who-grid { 
+        grid-template-columns: 1fr; 
+    } 
+    .who-card { 
+        padding: var(--spacing-md); 
+        min-height: auto; 
+    } 
+    .where-card {
+    padding: var(--spacing-md);
+    }
+      .card-image {
+    height: 160px;
+  }
+}
 
 
 
@@ -440,15 +519,14 @@ section {
     background-size: cover;
     background-attachment: fixed;
 }
-
 .contact .content .text {
+    padding: var(--spacing-xl);
     margin-bottom: var(--spacing-lg);
     color: white;
     font-size: 20px;
     text-align: center;
     text-shadow: 0px 0px var(--spacing-xs) rgba(0, 0, 0, 0.3);
 }
-
 .contact .row {
     display: flex;
     align-items: flex-start;
@@ -476,7 +554,7 @@ section {
     width: 100%;
     font-size: 16px;
     outline: none;
-    border: 1px solid var(--color-accent);
+    border: 2px solid var(--color-accent);
     font: var(--font-body);
 }
 .contact form textarea {
@@ -486,10 +564,9 @@ section {
     height: 150px;
     outline: none;
     resize: vertical;
-    border: 1px solid var(--color-accent);
+    border: 2px solid var(--color-accent);
     font: var(--font-body);
 }
-
 .contact form button {
     display: inline-block;
     padding: var(--spacing-sm) var(--spacing-md);
@@ -501,13 +578,21 @@ section {
     border: 2px solid transparent;
     font: var(--font-body);
 }
-
 .contact form button:hover {
     background-color: color-mix(in srgb, var(--color-primary) 80%, black);
     border-color: var(--color-secondary);
     transform: scale(1.04);
 }
-
+.contact input:hover,
+.contact textarea:hover {
+  border-color: var(--color-primary);
+}
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 133, 111, 0.18);
+}
 @media (max-width: 700px) {
     .contact .row {
         flex-direction: column;
