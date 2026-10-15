@@ -839,3 +839,43 @@ section {
         padding: var(--spacing-md);
     }
 }
+
+/* tools page */
+.materials-box {
+    padding: var(--spacing-lg);
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.tool-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+}
+
+.tool-list li {
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: white;
+    border: 3px solid var(--color-neutral);
+    border-bottom: 8px solid var(--color-primary);
+    border-radius: var(--radius-lg);
+}
+
+.tool-list .tool-more {
+    border-bottom-color: var(--color-highlight);
+}
+
+/* tools page -mobile */
+@media (max-width: 600px) {
+    .materials-box {
+        padding: var(--spacing-md);
+    }
+
+    .tool-list li {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+}
