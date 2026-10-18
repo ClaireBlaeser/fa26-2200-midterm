@@ -150,7 +150,7 @@ h3 {
 }
 
 
-/* ===== NAVBAR ===== */
+/*  navbar */
 .site-header {
     background-color: var(--color-neutral);
     position: fixed;
@@ -291,7 +291,7 @@ h3 {
     height: 1px;
     opacity: 0; 
 }
-/* MOBILE LAYOUT */
+/* mobile layout*/
 @media (max-width: 860px) {
     /* body {
         /* padding: var(--spacing-md); 
@@ -486,6 +486,7 @@ section {
   border-radius: var(--radius-sm);
   margin-bottom: var(--spacing-md);
 }
+
 /*stacked for smaller screens */
 @media (max-width: 600px) { 
     .who-grid { 
