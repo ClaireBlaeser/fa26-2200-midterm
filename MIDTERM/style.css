@@ -109,8 +109,6 @@ h3 {
     font-weight: 900;
 }
 
-
-
 .button {
     display: inline-block;
     padding: var(--spacing-sm) var(--spacing-md);
@@ -511,7 +509,7 @@ section {
     height: 100vh;
     width: 100%;
     position: relative;
-    background: url("images.jpg");
+    background: url("how.jpg");
     background-position: center 65%;
     background-size: cover;
     background-attachment: fixed;
@@ -632,6 +630,16 @@ section {
 /* --- banner tweaks for longer text / phones (only this page) --- */
 .makers-hero .content .text {
     padding: 0 var(--spacing-md);
+}
+
+.homepage.makers {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url("who.jpg");
+    background-position: center 65%;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .makers-hero .content .text p {
@@ -828,6 +836,15 @@ section {
     border: 3px solid var(--color-neutral);
     border-radius: var(--radius-lg);
 }
+.homepage.rules {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: url("rules.jpg");
+    background-position: center 65%;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
 /* different highlight color on top of each box */
 .cool-green  { border-top: 12px solid var(--color-primary); }
@@ -910,4 +927,144 @@ section {
     .tool-list li {
         padding: var(--spacing-xs) var(--spacing-sm);
     }
+}
+
+
+
+
+
+/* Wood shop policies */
+.wood-policies {
+    display: block;
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+.homepage.wood {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: url("woodshop.png");
+    background-position: center 65%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.policy-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: var(--spacing-md);
+}
+
+.policy-intro {
+    padding-left: var(--spacing-md);
+    border-left: 5px solid var(--color-accent);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-xl);
+}
+
+.policy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-md);
+}
+
+.policy-card {
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: white;
+    border: 3px solid var(--color-neutral);
+    border-bottom: 8px solid var(--color-primary);
+    border-radius: var(--radius-lg);
+}
+
+.policy-card h2 {
+    color: var(--color-secondary);
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.policy-card ul {
+    padding-left: 1.4rem;
+}
+
+.policy-card li {
+    line-height: 1.7;
+    margin-bottom: var(--spacing-sm);
+}
+
+.policy-important {
+    background: var(--color-neutral);
+    color: white;
+    border-top-color: var(--color-highlight);
+}
+
+.policy-important h2 {
+    color: var(--color-highlight);
+}
+
+@media (max-width: 700px) {
+    .policy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .policy-card {
+        padding: var(--spacing-md);
+    }
+}
+
+
+
+
+/* tools homepage */
+.homepage.tools {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url("tools.jpg");
+    background-position: center 65%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* lasers homepage */
+.homepage.lasers {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url("lasers.png");
+    background-position: center 65%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+ol.lasers {
+    padding-left: 1.4rem;
+
+}
+
+.maker.laser {
+    display: flex;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: white;
+    border: 3px solid var(--color-neutral);
+    border-bottom: 8px solid var(--color-primary);
+    border-radius: var(--radius-lg);
+}
+
+.section2 {
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15); 
+}
+
+/* 3d printing homepage */
+.homepage.print{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url("3d-printing.jpg");
+    background-position: center 65%;
+    background-size: cover;
+    background-attachment: fixed;
 }
