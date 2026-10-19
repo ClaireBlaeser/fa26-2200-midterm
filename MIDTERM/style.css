@@ -1069,3 +1069,14 @@ ol.lasers {
     background-size: cover;
     background-attachment: fixed;
 }
+
+/* electronics homepage */
+.homepage.electronics {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url("what.jpg");
+    background-position: center 65%;
+    background-size: cover;
+    background-attachment: fixed;
+}
