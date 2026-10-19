@@ -1080,3 +1080,14 @@ ol.lasers {
     background-size: cover;
     background-attachment: fixed;
 }
+
+/* sewing & textiles homepage */
+.homepage.sewing {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url("sewing.jpg");
+    background-position: center 65%;
+    background-size: cover;
+    background-attachment: fixed;
+}
