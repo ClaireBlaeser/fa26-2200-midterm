@@ -668,15 +668,15 @@ section {
     border-radius: var(--radius-lg);
     overflow: hidden;
 }
-/* 
+
 .maker-photo {
     max-width: 100%;
     width: 220px;
     min-height: 220px;
     object-fit: cover;
     flex-shrink: 0;
-} */
-.maker-photo {
+}
+/* .maker-photo {
     width: 220px;
     height: auto;
     min-height: 220px;
@@ -684,7 +684,7 @@ section {
     object-position: center;
     flex-shrink: 0;
     display: block;
-}
+} */
 
 /* placeholder box until the real photos are added */
 .photo-tbd {
