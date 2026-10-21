@@ -628,7 +628,7 @@ section {
 
 /* makers page */
 
-/* --- banner tweaks for longer text / phones (only this page) --- */
+/*  banner tweaks for longer text / phones (only this page) */
 .makers-hero .content .text {
     padding: 0 var(--spacing-md);
 }
@@ -660,7 +660,7 @@ section {
     gap: var(--spacing-lg);
 }
 
-/* --- Maker card: photo left, info middle, tools shape right --- */
+/* Maker card: photo left, info middle, tools shape right */
 .maker {
     display: flex;
     background-color: white;
@@ -730,7 +730,7 @@ section {
     font-size: 0.75rem;
 }
 
-/* --- The curved tools shape --- */
+/*  The curved tools shape  */
 .skills {
     flex: 1.5;
     padding: var(--spacing-lg);
@@ -764,7 +764,7 @@ section {
     font-size: 0.875rem;
 }
 
-/* --- Zack: separate+highlighted in yellow --- */
+/*  Zack: separate+highlighted in yellow  */
 .director {
     background-color: var(--color-highlight);
     border-width: 4px;
