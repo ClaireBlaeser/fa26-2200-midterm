@@ -959,7 +959,7 @@ section {
     padding: var(--spacing-xs) var(--spacing-md);
     background-color: white;
     border: 3px solid var(--color-neutral);
-    border-bottom: 8px solid var(--color-primary);
+    border-bottom: 8px solid var(--color-accent);
     border-radius: var(--radius-lg);
 }
 
@@ -1098,7 +1098,7 @@ ol.lasers {
     padding: var(--spacing-xs) var(--spacing-md);
     background-color: white;
     border: 3px solid var(--color-neutral);
-    border-bottom: 8px solid var(--color-primary);
+    border-bottom: 8px solid var(--color-accent);
     border-radius: var(--radius-lg);
 }
 
