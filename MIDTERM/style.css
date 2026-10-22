@@ -597,6 +597,28 @@ section {
     margin-bottom: var(--spacing-sm);
     margin-left: var(--spacing-md);
 }
+.calendarbutton{
+    margin-left: var(--spacing-md);
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.3s ease, transform 0.2s;
+    border: 2px solid transparent;
+    font: var(--font-body);
+}
+.calendarbutton:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 80%, black);
+    border-color: var(--color-secondary);
+    transform: scale(1.04);
+}
+
+.calendarbutton:active {
+    transform: scale(0.95);
+    background-color: var(--color-secondary);
+}
 .contact .col p i {
     color: var(--color-text-secondary)  ;
     margin-right: var(--spacing-sm);
