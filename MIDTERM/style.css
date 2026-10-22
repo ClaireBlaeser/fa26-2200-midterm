@@ -24,7 +24,8 @@
     --radius-sm: 4px;
     --radius-md: 12px;
     --radius-lg: 16px;
-}
+    --page-color: var(--color-primary);
+} 
 
 * {
     margin: 0;
@@ -166,7 +167,7 @@ ol{
     top: 0;
     left: 0;
     z-index: 999;
-    border-bottom: 3px solid var(--color-primary);
+    border-bottom: 3px solid var(--page-color);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -227,7 +228,7 @@ ol{
 .dropdown-label:hover,
 .links a:focus-visible,
 .dropdown-label:focus-visible {
-    color: var(--color-accent);
+    color: var(--color-highlight);
     text-decoration: underline;
     text-decoration-color: var(--color-highlight);
 }
@@ -859,41 +860,11 @@ section {
     font-size: 0.875rem;
 }
 
-/* makers page-mobile */
 @media (max-width: 800px) {
-    .makers-hero .content h1 {
-        font-size: 2.25rem;
-    }
-
-    .makers-hero .content .text {
-        font-size: 16px;
-    }
-
     .maker {
         flex-direction: column;
-    }
+    } } 
 
-    .maker-photo,
-    .director .maker-photo {
-        width: 100%;
-        height: 220px;
-        min-height: 0;
-    }
-
-    .maker-info {
-        padding: var(--spacing-md);
-    }
-
-    .skills {
-        padding: var(--spacing-md);
-        border-radius: 0;
-    }
-
-    .skills h4,
-    .skills ul {
-        padding-left: 0;
-    }
-}
 /* rules page */
 .cool-grid {
     list-style: none;
@@ -970,7 +941,7 @@ section {
     margin-bottom: var(--spacing-md);
 }
 
-.tool-list {
+/* .tool-list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -988,7 +959,7 @@ section {
 
 .tool-list .tool-more {
     border-bottom-color: var(--color-highlight);
-}
+} */
 
 /* tools page -mobile */
 @media (max-width: 600px) {
@@ -996,9 +967,9 @@ section {
         padding: var(--spacing-md);
     }
 
-    .tool-list li {
+   /* .tool-list li {
         padding: var(--spacing-xs) var(--spacing-sm);
-    }
+    } */
 }
 
 
@@ -1044,7 +1015,7 @@ section {
     padding: var(--spacing-xs) var(--spacing-md);
     background-color: white;
     border: 3px solid var(--color-neutral);
-    border-bottom: 8px solid var(--color-primary);
+    border-bottom: 8px solid var(--page-color);
     border-radius: var(--radius-lg);
 }
 
@@ -1174,13 +1145,6 @@ ol.lasers {
     background-attachment: fixed;
 }
 
-/* phone fixes */
-@media (max-width: 860px) {
-    .site-header {
-        margin: 0;
-    }
-}
-
 @media (max-width: 800px) {
     .homepage {
         background-attachment: scroll;
@@ -1190,6 +1154,7 @@ ol.lasers {
     }
     .homepage .content .text {
         padding: 0 var(--spacing-md);
+        font-size: 16px;
     }
 }
 
@@ -1227,14 +1192,14 @@ footer a {
 .site-header {
     border-bottom-color: var(--page-color);
 }
-.tool-list li,
+/* .tool-list li,
 .policy-card,
 .maker.laser {
     border-bottom-color: var(--page-color);
 }
 .page-sewing .tool-list .tool-more {
     border-bottom-color: var(--color-neutral);
-}
+} */
 
 /* CNC boxes */
 .audience-grid {
@@ -1259,4 +1224,80 @@ footer a {
     .audience-grid {
         grid-template-columns: 1fr;
     }
+}
+/* list fix */
+/* one big white box for the whole list */
+.tool-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: var(--spacing-lg);
+    list-style: square inside;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: white;
+    border: 6px solid var(--page-color);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.tool-list li {
+    padding: var(--spacing-xs) 0;
+}
+
+@media (max-width: 800px) {
+    .tool-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: var(--spacing-sm) var(--spacing-md);
+        column-gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 600px) {
+    .tool-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* rules + policies more even */
+.cool-grid {
+    grid-auto-flow: dense;
+}
+.cool-wide {
+    grid-column: span 2;
+}
+.cool-full {
+    grid-column: 1 / -1;
+}
+.policy-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-md);
+    list-style: none;
+}
+.policy-box {
+    margin-bottom: 0;
+}
+@media (max-width: 1000px) {
+    .cool-wide {
+        grid-column: auto;
+    }
+}
+@media (max-width: 600px) {
+    .policy-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* address line edit */
+.info-row {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-left: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+.info-row p {
+    margin: 0;
+}
+.info-label {
+    flex-shrink: 0;
+    width: 5rem;
 }
