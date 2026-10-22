@@ -335,10 +335,11 @@ h3 {
         border-radius: 0;
     }
 }
-
-
-
-
+   .calendar-frame {
+      width: 100%;
+      height: 450px;
+      border: 3px solid var(--color-neutral);
+  }
 footer{
     padding: var(--spacing-xl);
     background-color: var(--color-highlight);
@@ -1090,4 +1091,90 @@ ol.lasers {
     background-position: center 65%;
     background-size: cover;
     background-attachment: fixed;
+}
+/* phone fixes */
+@media (max-width: 860px) {
+    .site-header {
+        margin: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .homepage {
+        background-attachment: scroll;
+    }
+    .homepage .content h1 {
+        font-size: 2.25rem;
+    }
+    .homepage .content .text {
+        padding: 0 var(--spacing-md);
+    }
+}
+
+.link {
+    overflow-wrap: anywhere;
+}
+
+/* text contrast */
+.homepage::before {
+    background: rgba(0, 0, 0, 0.6);
+}
+.homepage .content h1 {
+    color: var(--color-highlight);
+}
+.link {
+    color: #35618c;
+}
+footer a {
+    color: var(--color-neutral);
+    text-decoration: underline;
+}
+
+/* each page gets its own color */
+:root {
+    --page-color: var(--color-primary);
+}
+.page-tools { --page-color: var(--color-primary); }
+.page-wood { --page-color: #e0568a; }
+.page-sewing { --page-color: var(--color-highlight); }
+.page-electronics { --page-color: #14a3b8; }
+.page-lasers { --page-color: var(--color-accent); }
+.page-3d { --page-color: #7b4fbf; }
+.page-cnc { --page-color: var(--color-secondary); }
+
+.site-header {
+    border-bottom-color: var(--page-color);
+}
+.tool-list li,
+.policy-card,
+.maker.laser {
+    border-bottom-color: var(--page-color);
+}
+.page-sewing .tool-list .tool-more {
+    border-bottom-color: var(--color-neutral);
+}
+
+/* CNC boxes */
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+.audience-box {
+    background: white;
+    padding: var(--spacing-md);
+    border: 3px solid var(--color-neutral);
+    border-top: 12px solid var(--page-color);
+    border-radius: var(--radius-lg);
+}
+.audience-box h3 {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    color: var(--color-neutral);
+}
+@media (max-width: 800px) {
+    .audience-grid {
+        grid-template-columns: 1fr;
+    }
 }
