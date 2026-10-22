@@ -34,6 +34,12 @@
 
 html {
     scroll-behavior: smooth;
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
 }
 
 body {
@@ -46,10 +52,13 @@ body {
 
 h1 {
     font-family: var(--font-primary);
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 5vw, 3rem);
     font-weight: 700;
+    line-height: 1.3;
     margin-bottom: var(--spacing-md);
     color: var(--color-primary);
+    max-width: 100%;
+    overflow-wrap: break-word;
 }
 
 h2 {
@@ -302,13 +311,21 @@ h3 {
         /* padding: var(--spacing-md); 
     }*/
     .site-header {
-        margin: calc(-1 * var(--spacing-md))
-                calc(-1 * var(--spacing-md))
-                var(--spacing-lg);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin: 0;
     }
+
     .navbar {
+        width: 100%;
+        max-width: 1200px;
         flex-wrap: wrap;
+        box-sizing: border-box;
     }
+    
     .hamburger {
         display: block;
         margin-left: auto;
@@ -330,16 +347,29 @@ h3 {
     .dropdown-label {
         display: block;
         width: 100%;
-        padding: var(--spacing-sm) 0;
+        padding: var(--spacing-xs) 0;
     }
     .dropdown-menu {
         position: static;
         min-width: 0;
         width: 100%;
-        padding-left: var(--spacing-md);
+        padding-left: var(--spacing-sm);
         border: none;
         border-left: 2px solid var(--color-primary);
         border-radius: 0;
+    }
+    p {
+        font-size: clamp(12px, 3.5vw, 16px);
+        line-height: 1.5;
+    }
+    h2 {
+        font-size: clamp(1.2rem, 5vw, 2rem);
+        line-height: 1.3;
+        margin-bottom: var(--spacing-md);
+    }
+    ul {
+        font-size: clamp(12px, 3.5vw, 16px);
+        line-height: 1.5;
     }
 }
 
@@ -388,9 +418,13 @@ footer a:hover {
     z-index: 1;
 }
 .homepage .content h1 {
-    font-size: 80px;
-    font:'.silkscreen-regular';
+    font-family: var(--font-primary);
+    font-size: clamp(1.5rem, 7vw, 5rem);
+    line-height: 1.3;
     margin-bottom: var(--spacing-sm);
+    max-width: 100%;
+    overflow-wrap: break-word;
+    text-align: center;
 }
 .homepage .content .text {
     margin-bottom: var(--spacing-lg);
