@@ -392,7 +392,7 @@ ol{
     .logo img {
         width: 28px;
         height: 28px;
-    }
+    }  
 }
    .calendar-frame {
       width: 100%;
@@ -414,8 +414,6 @@ footer a {
 footer a:hover {
     color: var(--color-accent);
 }
-
-
 
 .homepage {
     height: 100vh;
@@ -455,6 +453,8 @@ footer a:hover {
     font-size: 20px;
     text-align: center;
     text-shadow: 0px 0px var(--spacing-sm) rgba(0, 0, 0, 1);
+    margin-left: var(--spacing-md);
+    margin-right: var(--spacing-md);
 }
 
 
@@ -1140,6 +1140,18 @@ ol.lasers {
     background-size: cover;
     background-attachment: fixed;
 }
+
+/* CNC homepage */
+.homepage.cnc {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url("cnc.jpg");
+    background-position: center 65%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 /* phone fixes */
 @media (max-width: 860px) {
     .site-header {
