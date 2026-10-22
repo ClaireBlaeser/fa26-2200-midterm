@@ -75,7 +75,9 @@ h3 {
     margin-bottom: var(--spacing-sm);
     color: var(--color-accent);
 }
-
+ol{
+    margin-left: var(--spacing-md);
+}
 .body-text {
     font-size: 1rem;
     margin-bottom: var(--spacing-md);
@@ -178,19 +180,30 @@ h3 {
     gap: var(--spacing-md);
 }
 
-.logo {
-    color: var(--color-text-light);
-    font-family: var(--font-primary);
-    text-decoration: none;
-}
-.logo span {
-    color: var(--color-highlight);
-}
-
 .links {
     display: flex;
     align-items: center;
     gap: var(--spacing-md);
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-text-light);
+    font-family: var(--font-primary);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo span {
+    color: var(--color-text-light);
 }
 /* Underline the current page in the navigation */
 .links a.active {
@@ -370,6 +383,15 @@ h3 {
     ul {
         font-size: clamp(12px, 3.5vw, 16px);
         line-height: 1.5;
+    }
+    .logo {
+        gap: 8px;
+        font-size: 0.8rem;
+    }
+
+    .logo img {
+        width: 28px;
+        height: 28px;
     }
 }
 
