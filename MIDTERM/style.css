@@ -1139,6 +1139,18 @@ ol.lasers {
     background-size: cover;
     background-attachment: fixed;
 }
+
+/* CNC homepage */
+.homepage.cnc {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url("cnc.jpg");
+    background-position: center 65%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 /* phone fixes */
 @media (max-width: 860px) {
     .site-header {
