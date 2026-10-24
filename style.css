@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
 @import url("https://use.typekit.net/hjb2cfh.css");
 :root {
-    --color-primary: #00856f;     /* Vibrant Blue - Main Brand Color */
-    --color-secondary: #4476a2;   /* Emerald Green - Complementary Action Color */
-    --color-accent: #ab2346;      /* Passionate Red - Highlight / Warning Color */
-    --color-neutral: rgb(25, 21, 22);     /* Deep Slate Gray - Neutral Text and Background */
-    --color-highlight: #FFC857;   /* Bright Yellow - Accent / Attention Color */
+    --color-primary: #00856f;     /* green */
+    --color-secondary: #4476a2;   /* blue */
+    --color-accent: #ab2346;      /* red */
+    --color-neutral: rgb(25, 21, 22);     /* dark gray */
+    --color-highlight: #FFC857;   /* yellow */
             
            
     --color-background: color-mix(in srgb, var(--color-neutral) 10%, rgb(255, 251, 239));
@@ -35,20 +35,19 @@
 
 html {
     scroll-behavior: smooth;
-
+}
 html, body {
     width: 100%;
     max-width: 100%;
     overflow-x: clip;
 }
-}
+
 
 body {
     font-family: var(--font-secondary);
     line-height: 1.6;
     background-color: var(--color-background);
     color: var(--color-text-dark);
-    /* padding: var(--spacing-xl); */
 }
 
 h1 {
@@ -82,12 +81,6 @@ ol{
 .body-text {
     font-size: 1rem;
     margin-bottom: var(--spacing-md);
-}
-
-.small-text {
-    font:'.silkscreen-regular';
-    font-size: 0.75rem;
-    color: color-mix(in srgb, var(--color-text-dark) 70%, transparent);
 }
 
 .silkscreen-regular {
@@ -144,9 +137,10 @@ ol{
 }
 
 .link {
-    color: var(--color-secondary);
+    color: #35618c;
     text-decoration: underline;
     transition: color 0.2s ease, text-decoration-color 0.5s;
+    overflow-wrap: anywhere;
 }
 
 .link:hover {
@@ -156,11 +150,11 @@ ol{
 }
 
 .link:visited {
-    color: var(--color-neutral);
+    color: #35618c;
 }
 
 
-/*  navbar */
+/* navbar */
 .site-header {
     background-color: var(--color-neutral);
     position: fixed;
@@ -206,7 +200,7 @@ ol{
 .logo span {
     color: var(--color-text-light);
 }
-/* Underline the current page in the navigation */
+/* current page*/
 .links a.active {
     text-decoration: underline;
     text-decoration-color: var(--color-highlight);
@@ -280,6 +274,12 @@ ol{
     font-size: 1.5rem;
     cursor: pointer;
 }
+.menu-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
 /* hamburger  smaller screens */
 @media (max-width: 860px) {
     .hamburger {
@@ -308,22 +308,8 @@ ol{
     outline: 2px solid var(--color-highlight);
     outline-offset: 4px;
 }
-.menu-toggle:focus-visible + .hamburger {
-    outline: 2px solid var(--color-highlight);
-    outline-offset: 4px;
-}
-/* Mobile menu */
-.menu-toggle {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    opacity: 0; 
-}
 /* mobile layout*/
 @media (max-width: 860px) {
-    /* body {
-        /* padding: var(--spacing-md); 
-    }*/
     .site-header {
         position: fixed;
         top: 0;
@@ -395,19 +381,14 @@ ol{
         height: 28px;
     }  
 }
-   .calendar-frame {
-      width: 100%;
-      height: 450px;
-      border: 3px solid var(--color-neutral);
-  }
 footer{
     padding: var(--spacing-xl);
     background-color: var(--color-highlight);
 }
 footer a {
+    color: var(--color-neutral); 
+    text-decoration: underline;
     margin-left: 0;
-    text-decoration: none;
-    color: var(--color-secondary);
     height: 100%;
     padding: var(--spacing-sm) 0;
     display: inline-block;
@@ -429,7 +410,7 @@ footer a:hover {
     content: ""; 
     position: absolute; 
     inset: 0;
-    background: rgba(0, 0, 0, 0.7); 
+    background: rgba(0, 0, 0, 0.6); 
 }
 .homepage .content {
     display: flex;
@@ -440,6 +421,7 @@ footer a:hover {
     z-index: 1;
 }
 .homepage .content h1 {
+    color: var(--color-highlight);
     font-family: var(--font-primary);
     font-size: clamp(1.5rem, 7vw, 5rem);
     line-height: 1.3;
@@ -525,12 +507,14 @@ section {
     font-family: var(--font-secondary); 
     line-height: 1.6; 
 }
-.who-grid a {
+.who-grid a,
+.where-card a {
     color: var(--color-highlight);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
-.who-grid a:hover{
+.who-grid a:hover,
+.where-card a:hover{
     color: white;
 }
 .where-card {
@@ -598,32 +582,6 @@ section {
     margin-bottom: var(--spacing-sm);
     margin-left: var(--spacing-md);
 }
-.calendarbutton{
-    margin-left: var(--spacing-md);
-    display: inline-block;
-    padding: var(--spacing-sm) var(--spacing-md);
-    background-color: var(--color-primary);
-    color: var(--color-text-light);
-    text-decoration: none;
-    border-radius: var(--radius-sm);
-    transition: background-color 0.3s ease, transform 0.2s;
-    border: 2px solid transparent;
-    font: var(--font-body);
-}
-.calendarbutton:hover {
-    background-color: color-mix(in srgb, var(--color-primary) 80%, black);
-    border-color: var(--color-secondary);
-    transform: scale(1.04);
-}
-
-.calendarbutton:active {
-    transform: scale(0.95);
-    background-color: var(--color-secondary);
-}
-.contact .col p i {
-    color: var(--color-text-secondary)  ;
-    margin-right: var(--spacing-sm);
-}
 .contact form input {
     height: 45px;
     margin-bottom: var(--spacing-sm);
@@ -632,7 +590,7 @@ section {
     font-size: 16px;
     outline: none;
     border: 2px solid var(--color-accent);
-    font: var(--font-body);
+    font-family: var(--font-secondary);
     border-radius: var(--radius-sm);    
 }
 .contact form textarea {
@@ -643,7 +601,7 @@ section {
     outline: none;
     resize: vertical;
     border: 2px solid var(--color-accent);
-    font: var(--font-body);
+    font-family: var(--font-secondary);
     border-radius: var(--radius-sm);
 }
 .contact form button {
@@ -656,7 +614,7 @@ section {
     border-radius: var(--radius-sm);
     transition: background-color 0.3s ease, transform 0.2s;
     border: 2px solid transparent;
-    font: var(--font-body);
+    font-family: var(--font-secondary);
 }
 .contact form button:hover {
     background-color: color-mix(in srgb, var(--color-primary) 80%, black);
@@ -719,7 +677,7 @@ section {
     margin-bottom: var(--spacing-sm);
 }
 
-/* keeps content centered and not too wide */
+/* pagewidth */
 .wrap {
     width: 100%;
     max-width: 1200px;
@@ -732,7 +690,7 @@ section {
     gap: var(--spacing-lg);
 }
 
-/* Maker card: photo left, info middle, tools shape right */
+/* Maker card */
 .maker {
     display: flex;
     background-color: white;
@@ -757,17 +715,6 @@ section {
     flex-shrink: 0;
     display: block;
 } */
-
-/* placeholder box until the real photos are added */
-.photo-tbd {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-neutral);
-    color: var(--color-highlight);
-    font-family: var(--font-primary);
-    font-size: 1.5rem;
-}
 
 .maker-info {
     flex: 1;
@@ -911,7 +858,7 @@ section {
     background-attachment: fixed;
 }
 
-/* different highlight color on top of each box */
+/* diff highlight 4 boxes */
 .cool-green  { border-top: 12px solid var(--color-primary); }
 .cool-blue   { border-top: 12px solid var(--color-secondary); }
 .cool-red    { border-top: 12px solid var(--color-accent); }
@@ -962,27 +909,6 @@ section {
     border-radius: var(--radius-lg);
     margin-bottom: var(--spacing-md);
 }
-
-/* .tool-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-xl);
-}
-
-.tool-list li {
-    padding: var(--spacing-xs) var(--spacing-md);
-    background-color: white;
-    border: 3px solid var(--color-neutral);
-    border-bottom: 8px solid var(--color-accent);
-    border-radius: var(--radius-lg);
-}
-
-.tool-list .tool-more {
-    border-bottom-color: var(--color-highlight);
-} */
-
 /* tools page -mobile */
 @media (max-width: 600px) {
     .materials-box {
@@ -1180,48 +1106,19 @@ ol.lasers {
     }
 }
 
-.link {
-    overflow-wrap: anywhere;
-}
-
-/* text contrast */
-.homepage::before {
-    background: rgba(0, 0, 0, 0.6);
-}
-.homepage .content h1 {
-    color: var(--color-highlight);
-}
-.link {
-    color: #35618c;
-}
-footer a {
-    color: var(--color-neutral);
-    text-decoration: underline;
-}
-
 /* each page gets its own color */
-:root {
-    --page-color: var(--color-primary);
-}
 .page-tools { --page-color: var(--color-primary); }
-.page-wood { --page-color: #e0568a; }
+.page-wood { --page-color: #ab2346; }
 .page-sewing { --page-color: var(--color-highlight); }
-.page-electronics { --page-color: #14a3b8; }
+.page-electronics { --page-color: #4476a2; }
 .page-lasers { --page-color: var(--color-accent); }
-.page-3d { --page-color: #7b4fbf; }
+.page-3d { --page-color: rgb(25, 21, 22); }
 .page-cnc { --page-color: var(--color-secondary); }
+
 
 .site-header {
     border-bottom-color: var(--page-color);
 }
-/* .tool-list li,
-.policy-card,
-.maker.laser {
-    border-bottom-color: var(--page-color);
-}
-.page-sewing .tool-list .tool-more {
-    border-bottom-color: var(--color-neutral);
-} */
 
 /* CNC boxes */
 .audience-grid {
@@ -1322,4 +1219,16 @@ footer a {
 .info-label {
     flex-shrink: 0;
     width: 5rem;
+}
+.audience-box p {
+    margin-bottom: var(--spacing-sm);
+}
+.contact a {
+    color: #35618c;
+    text-decoration: underline;
+}
+.contact .button,
+.contact .button:hover {
+    color: var(--color-text-light);
+    text-decoration: none;
 }

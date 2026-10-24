@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOW THINGS UP</title>
+    <title>Contact | BTU Lab</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -16,8 +16,7 @@
 
     <label for="toggler" class="hamburger">☰</label>
     <input type="checkbox" id="toggler" class="menu-toggle">
-    <label for="toggler" id="hamburger" aria-label="Toggle navigation">
-    </label>
+  
 
     <ul class="links">
       <li><a href="index.html">Home</a></li>
@@ -39,13 +38,14 @@
       </li>
 
       <li><a href="mischief-makers.html">Mischief Makers</a></li>
+      <li><a href="faculty.html">Faculty</a></li>
       <li><a href="Rules.html">Rules & Safety</a></li>
       <li><a href="contact.html" class="active" aria-current="page">Calendar & Contact</a></li>
     </ul>
   </nav>
 </header>
 
-
+<main>
 <section class="homepage contact" id="contact">
     <div class="content">
         <div class="text">
@@ -58,29 +58,29 @@
     </div>
 </section>
 
-<section class="contact" id="contact">
+<section class="contact" id="contactinfo">
     <div class="row wrap">
         <div class="col contact-info">
-            <h3>Contact Information</h3>
+            <h2>Contact Information</h2>
             <div class="info-row">
     <p class="info-label"><strong class="bold">Address:</strong></p>
     <p>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=320+UCB%2C+1125+18th+St%2C+Boulder%2C+CO+80309" target="_blank">University of Colorado Boulder<br>320 UCB, 1125 18th St<br>Boulder, CO 80309</a></p>
+      <a href="https://www.google.com/maps/dir/?api=1&amp;destination=320+UCB%2C+1125+18th+St%2C+Boulder%2C+CO+80309" target="_blank">University of Colorado Boulder<br>320 UCB, 1125 18th St<br>Boulder, CO 80309</a></p>
 </div>
 <div class="info-row">
     <p class="info-label"><strong class="bold">Email:</strong></p>
     <p>atlasbtulab@gmail.com</p>
-</div><h3>Calendar</h3>
+</div><h2>Calendar</h2>
             <p>Check our upcoming events and workshops here:</p>
-            <button class="calendarbutton" onclick="window.open('https://calendar.google.com/calendar/u/0/embed?color=%2392e1c0&color=%23cd74e6&color=%23f83a22&color=%23fad165&src=01c19e46b7d1df63b8c2bf86c13e9e8d4dd48407953069b76258fa20a9f6e946@group.calendar.google.com&src=1d4bdcc88938abd2d291838c548916abba1d14f79ad53e49a62b76c16d0ce4fc@group.calendar.google.com&src=917af08c35085b7a6203c14ddcfb9a84b26f31030114e022d423518e82d442e3@group.calendar.google.com&src=atlasbtulab@gmail.com', '_blank')">View Calendar</button>
+               <a class="button" href="https://calendar.google.com/calendar/u/0/embed?color=%2392e1c0&amp;color=%23cd74e6&amp;color=%23f83a22&amp;color=%23fad165&amp;src=01c19e46b7d1df63b8c2bf86c13e9e8d4dd48407953069b76258fa20a9f6e946@group.calendar.google.com&amp;src=1d4bdcc88938abd2d291838c548916abba1d14f79ad53e49a62b76c16d0ce4fc@group.calendar.google.com&amp;src=917af08c35085b7a6203c14ddcfb9a84b26f31030114e022d423518e82d442e3@group.calendar.google.com&amp;src=atlasbtulab@gmail.com" target="_blank" rel="noopener">View Calendar</a>
         </div>
         <div class="col form">
           <h3>Send us a message here!</h3>
             <form>
-                <input type="text" placeholder="Name*" required>
-                <input type="email" placeholder="Email*" required>
-                <textarea placeholder="Message*" required></textarea>
-                <button id="submit" type="submit">Send Message</button>
+              <input type="text" placeholder="Name*" aria-label="Name" required>
+              <input type="email" placeholder="Email*" aria-label="Email" required>
+              <textarea placeholder="Message*" aria-label="Message" required></textarea>
+              <button id="submit" type="submit">Send Message</button>
             </form>
         </div>
     </div>
@@ -110,7 +110,7 @@
         <div class="wrap">
             <!-- add photo later -->
                 <article class="maker">
-                    <img class="maker-photo" src="donate.jpg" alt="Two makers colaborating">
+                    <img class="maker-photo" src="donate.jpg" alt="Two makers collaborating">
                     <div class="maker-info">
                       <h2>We can't do it without you!</h2>
                       <p>If you're interested in learning ways to support BTU Lab, contact lab Director <a class="link" href="mailto:zaja9653@colorado.edu">Zack Weaver</a>. </p>
@@ -120,7 +120,7 @@
         </div>
         <br>
       </section>
-
+    </main>
 
 
 <footer>
@@ -133,10 +133,6 @@
       <p>
         Follow BTU Lab on <a href="https://www.instagram.com/btulab_cu/">Instagram</a>!
       </p>
-      <em>
-      This site is a class redesign project made for a web design assignment.
-      It is not the official BTU Lab website.
-      </em>
     </footer>
 </body>
  
