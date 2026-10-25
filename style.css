@@ -153,6 +153,18 @@ ol{
     color: #35618c;
 }
 
+.instalink {
+    text-decoration: underline;
+    transition: color 0.2s ease, text-decoration-color 0.5s;
+    overflow-wrap: anywhere;
+}
+
+.instalink:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-decoration-color: var(--color-highlight);
+}
+
 
 /* navbar */
 .site-header {
